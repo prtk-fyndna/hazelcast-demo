@@ -1,0 +1,22 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+spec:
+  type: pubsub.kafka
+  version: v1
+  metadata:
+    - name: brokers
+      value: "localhost:9092"
+    - name: clientID
+      value: "hazelcast-demo"
+    - name: authType
+      value: "none"
+    - name: authRequired
+      value: "false"
+    - name: disableTls
+      value: "true"
+    - name: maxMessageBytes
+      value: 204800
+    - name: consumeRetryInterval
+      value: 200ms

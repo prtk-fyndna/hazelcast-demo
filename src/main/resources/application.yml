@@ -1,0 +1,23 @@
+server:
+  port: 10000
+spring:
+  profiles:
+    active: ${SPRING_PROFILE:default}
+
+hazelcast:
+  clusterName: dev
+  address: 127.0.0.1:5701
+
+pubsub:
+  name: "pubsub"
+  topic: "transaction_topic"
+
+
+---
+# consumer profile
+spring:
+  config:
+    activate:
+      on-profile: consumer
+server:
+  port: 10001
