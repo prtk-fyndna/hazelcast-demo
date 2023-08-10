@@ -9,7 +9,9 @@ publish the request to kafka. The request is consumed by consumer service and it
 in a distributed Hazelcast map. This notifies the listener in producer service and response to the http request is 
 sent back to client.
 
-![arch.png](arch.png)
+
+![arch](https://github.com/prtk-fyndna/hazelcast-demo/assets/91265510/cd6b4096-b292-4b4f-9ba0-b65fe5cc6193)
+
 
 We use Hazelcast's [Distributed map](https://docs.hazelcast.com/hazelcast/5.3/data-structures/map) and [EntryAddedListener](https://docs.hazelcast.com/imdg/4.2/events/object-events#listening-for-map-events)
 The code for attaching the listener and adding entry in hazelcast map is present in `src/main/java/com/fyndna/hazelcastdemo/service/TransactionService.java` class
