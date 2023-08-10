@@ -2,10 +2,7 @@
 
 ## Overview
 
-The following steps will start the necessary infra and services 
-to demo processing a synchronous request asynchronously using kafka and hazelcast. 
-
-
+This respository is a poc for processing a synchronous http request asynchronously, using kafka and hazelcast. 
 
 In the demo, client will send a request to producer service which will attach a listener in Hazelcast distributed map and
 publish the request to kafka. The request is consumed by consumer service and its response is added
